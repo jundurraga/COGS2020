@@ -105,14 +105,15 @@ Grothe et al. (2010)
 
 <div class="column" style="float:right; width:80%; text-align: right">
 
-<img class="fragment" data-fragment-index="3" src="./my_figures/spectrogram_cheap.png" width="100%" data-audio-src="./audio/cheap_clean.wav" data-audio-advance=-1> 
+<img class="fragment" data-fragment-index="3" src="./my_figures/spectrogram_cheap.png" width="80%" data-audio-src="./audio/cheap_clean.wav" data-audio-advance=-1> 
 
 </div>
+
 
 ## Harmonicity
 
 <center>
-<img class="fragment" data-fragment-index="4" src="./my_figures/spectrogram_arctic_a0002.png" width="80%" data-audio-src="./audio/sentences/arctic_a0002.wav" data-audio-advance=-1> 
+<img class="fragment" data-fragment-index="0" src="./my_figures/spectrogram_arctic_a0002.png" width="80%" data-audio-src="./audio/sentences/arctic_a0002.wav" data-audio-advance=-1> 
 </center>
 
 
@@ -478,13 +479,27 @@ The implications of these technologies reach basic sciences and medical applicat
 
 ## EEG principle
 
+<div class='multiCol'>
+
+<div class='col'>
 <center>
-![](./my_figures/Luck_2005_erp.png){width="50%"}
+![](./my_figures/Luck_2005_erp.png){width="100%"}
 </center>
 
 <center>
 (From Luck 2005)
 </center>
+
+</div>
+
+<div class='col'>
+<video src="./my_figures/41592_2020_762_MOESM6_ESM.mp4" type="video/mp4" controls height="200" width="200" preload="auto">
+</video>
+<center>
+Glutamate transients 
+</center>
+</div>
+</div>
 
 ## Auditory evoked potentials
 
