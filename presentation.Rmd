@@ -8,7 +8,7 @@ output:
    transition: fade
    slide_level: 2
    self_contained: false
-   reveal_plugins: ["zoom", "notes", "chalkboard"]
+   reveal_plugins: ["menu", "zoom", "notes", "chalkboard"]
    reveal_options:
      chalkboard: 
        toggleNotesButton: true
@@ -20,7 +20,7 @@ output:
      before_body: doc_prefix.html
      after_body: doc_suffix.html
    css: presentation.css
-   # pandoc_args: [ "--output=index.html"]
+   pandoc_args: [ "--output=index.html"]
 # bibliography: ./library.bib  
 ---
 
@@ -42,6 +42,19 @@ https://jundurraga.github.io/COGS2020/#/
 qrcode_gen('https://jundurraga.github.io/COGS2020/#/')
 ```
 </center>
+
+A printable version of this presentation can be obtained at
+
+<center>
+https://jundurraga.github.io/COGS2020/?print-pdf#/
+</center>
+
+<center>
+```{r qr_code_pdf, eval=T, echo=F, fig.cap="", fig.width=6, fig.height=2.5}
+qrcode_gen('https://jundurraga.github.io/COGS2020/?print-pdf#/')
+```
+</center>
+
 
 # Introduction
 
@@ -72,22 +85,54 @@ This level is sufficient to give adequate intelligibility for listeners with nor
 Grothe et al. (2010)
 </center>
 
+## Monaural cues and Auditory scence analysis
+
+- Normal hearing listeners can segregate sounds remarkably well from monaural signals.
+- The brain can use the statistical regularities of a sound to group acoustic characteristics that are likely originated from the same source.
+
+<div class="column" style="float:left; width:20%; text-align: left">
+<br>
+<br>
+<br>
+<li class="fragment" data-fragment-index="0"> common onset </li> 
+<br>
+<li class="fragment" data-fragment-index="1"> harmonicity </li> 
+<br>
+<li class="fragment" data-fragment-index="2"> repetition </li> 
+
+</div>
+
+
+<div class="column" style="float:right; width:80%; text-align: right">
+
+<img class="fragment" data-fragment-index="3" src="./my_figures/spectrogram_cheap.png" width="100%" data-audio-src="./audio/cheap_clean.wav" data-audio-advance=-1> 
+
+</div>
+
+## Harmonicity
+
+<center>
+<img class="fragment" data-fragment-index="4" src="./my_figures/spectrogram_arctic_a0002.png" width="80%" data-audio-src="./audio/sentences/arctic_a0002.wav" data-audio-advance=-1> 
+</center>
+
 
 # Encoding of sounds
 
 ## Monaural Pathway
 
+
 <center>
-<img class="fragment" data-fragment-index="0" src="./my_figures/Anatomy_of_the_Human_Ear.svg" width="80%">
+![](./my_figures/Anatomy_of_the_Human_Ear.svg){width="50%"}
 </center>
 
-##
+
+## Transduction
 
 <center>
-<img class="fragment" data-fragment-index="1" src="./my_figures/Uncoiled_cochlea_with_basilar_membrane_color.png" width="45%">
-<img class="fragment" data-fragment-index="2" src="./my_figures/Cochlea-crosssection.png" width="25%">
+<img class="fragment" data-fragment-index="0" src="./my_figures/Uncoiled_cochlea_with_basilar_membrane_color.png" width="45%">
+<img class="fragment" data-fragment-index="1" src="./my_figures/Cochlea-crosssection.png" width="25%">
 <br>
-<img class="fragment" data-fragment-index="3" src="./my_figures/auditory_nerve.png" width="25%">
+<img class="fragment" data-fragment-index="2" src="./my_figures/auditory_nerve.png" width="25%">
 </center>
 
 
@@ -131,8 +176,12 @@ Grothe et al. (2010)
 - Temporal fine structure (TFS)
 - Envelope information (ENV)
 
-<li class ="fragment" data-fragment-index="0" data-audio-src="./audio/speech-davidvocoder.wav" data-audio-advance=-1> Play 6 Channel vocoder </li>
-<li class ="fragment" data-fragment-index="1" data-audio-src="./audio/david.wav" data-audio-advance=-1> Play Original </li>
+<li class ="fragment" data-fragment-index="0" data-audio-src="./audio/vocoder_ch_6_arctic_a0008.wav" data-audio-advance=-1> Example 1, 6 Channel vocoder </li>
+
+<li class ="fragment" data-fragment-index="1" data-audio-src="./audio/original_arctic_a0008.wav" data-audio-advance=-1> Example 1, Original </li>
+
+<li class ="fragment" data-fragment-index="2" data-audio-src="./audio/vocoder_ch_6_david.wav" data-audio-advance=-1> Example 2, 6 Channel vocoder </li>
+<li class ="fragment" data-fragment-index="3" data-audio-src="./audio/original_david.wav" data-audio-advance=-1> Example 2, Original </li>
 
 <center>
 ![](./my_figures/temporal-example.png){width="60%"}
@@ -140,7 +189,9 @@ Grothe et al. (2010)
 
 
 
-## Binaural cues
+# Binaural cues
+
+## Sound localization
 
 When listening to sounds, we rely on three mechanisms for both sound localization and auditory scene analysis 
 
@@ -213,6 +264,42 @@ ITDs in the envelope of the signal are also used to determine the location of a 
 <p class="fragment" data-fragment-index="3"> Modulated 4000 Hz tone <br> with envelope itd left-to-rigth </p>
 </div>
 
+## Localization using ITDs
+
+<img src="./my_figures/wave_length.png" width="40%">
+
+<li class="fragment" data-fragment-index="1"> 
+ITDs are ambiguous for frequencies which half-wavelengths are smaller than the head 'diameter'.
+</li>
+
+
+## Localization on the vertical plane
+
+<img class="fragment" data-fragment-index="0" src="./my_figures/zenith.png" width="40%">
+<img class="fragment" data-fragment-index="1" src="./my_figures/zenith_ir.png" width="50%">
+
+<li class="fragment" data-fragment-index="2"> The main cues are provided by diffraction patterns by the head and pinna, which result in characteristic spectral dips 
+</li>
+
+<li class="fragment" data-fragment-index="3"> 
+Hearing-impaired subjects have wider cochlear filters (increasing spectral smearing), preventing them to localize a source in the vertical plane.
+</li>
+
+## The precedence effect
+
+<img src="./my_figures/precedence_effect_cartoon.png" width="80%">
+<br>
+(Dietz et al. 2013)
+
+<li class="fragment" data-fragment-index="0"> 
+A single auditory event is perceived at the direction of the first direct wave front (2 and 50 ms later, even when reflections are 10 dB louder)
+</li>
+
+<li class="fragment" data-fragment-index="1">
+Asymmetric hearing loss, hearing impairment and ageing negatively affect the precedence effect (Akeroyd and Guy,
+2011). This can only partially restored by hearing aids.
+</li>
+
 
 # Binaural processing and speech understanding
 
@@ -271,10 +358,9 @@ et al., 2001; Hawley et al., 2004)
 >- Hearing impaired listeners with symmetric binaural hearing often demonstrate reduced SRM primarily due to increased thresholds in spatially separated conditions (Arbogast et al., 2005; Marrone et al., 2008b; Best et al., 2012)
 
 
-
 # Auditory Pathway
 
-##
+## From sound to neural spikes
 
 <center>
 Input to one ear
@@ -286,7 +372,7 @@ Output at the auditory nerve level
 ![](./my_figures/rater.png){width="40%"}
 </center>
 
-## 
+## From the ear to the brain
 
 <center>
 ![](./my_figures/auitorypath.png){width="40%"}
@@ -441,7 +527,7 @@ The implications of these technologies reach basic sciences and medical applicat
 (Undurraga et al. 2016)
 </center>
 
-##
+## Examples
 
 - The size of the interaural phase difference (relative ITD with respect to the frequency of the sound) will determine the lateralization of the sound.
 
@@ -592,7 +678,7 @@ Stimuli were amplitude modulated tones (500 Hz) using IPDs ranging from 0 (dioti
 ![](my_figures/noise.png){width="30%"}
 </center>
 
-##
+## Behavioural methods
 
 - Initial step size: 6 dB first two reversals; 3 dB next two reversals, and 2 dB last six reversals.
 

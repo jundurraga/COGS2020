@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Jaime A. Undurraga" />
-  <meta name="dcterms.date" content="2020-09-25" />
+  <meta name="dcterms.date" content="2020-09-28" />
   <title>Binaural Hearing</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -56,6 +56,9 @@
       border-color: gray;
     }
 
+    .reveal .slide-menu-button {
+      left: 105px !important;
+    }
 
   </style>
 
@@ -456,7 +459,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section>
     <h1 class="title">Binaural Hearing</h1>
     <h2 class="author">Jaime A. Undurraga</h2>
-    <h3 class="date">2020-09-25</h3>
+    <h3 class="date">2020-09-28</h3>
 </section>
 
 <section id="before-starting" class="slide level2">
@@ -467,6 +470,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </center>
 <center>
 <img src="presentation_files/figure-revealjs/qr_code-1.png" width="576" />
+</center>
+<p>A printable version of this presentation can be obtained at</p>
+<center>
+<a href="https://jundurraga.github.io/COGS2020/?print-pdf#/" class="uri">https://jundurraga.github.io/COGS2020/?print-pdf#/</a>
+</center>
+<center>
+<img src="presentation_files/figure-revealjs/qr_code_pdf-1.png" width="576" />
 </center>
 </section>
 <section><section id="introduction" class="title-slide slide level1"><h1>Introduction</h1></section><section id="cocktail-party-problem-cherry-1953" class="slide level2">
@@ -489,16 +499,44 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <center>
 Grothe et al. (2010)
 </center>
+</section><section id="monaural-cues-and-auditory-scence-analysis" class="slide level2">
+<h2>Monaural cues and Auditory scence analysis</h2>
+<ul>
+<li>Normal hearing listeners can segregate sounds remarkably well from monaural signals.</li>
+<li>The brain can use the statistical regularities of a sound to group acoustic characteristics that are likely originated from the same source.</li>
+</ul>
+<div class="column" style="float:left; width:20%; text-align: left">
+<br> <br> <br>
+<li class="fragment" data-fragment-index="0">
+common onset
+</li>
+<br>
+<li class="fragment" data-fragment-index="1">
+harmonicity
+</li>
+<br>
+<li class="fragment" data-fragment-index="2">
+repetition
+</li>
+</div>
+<div class="column" style="float:right; width:80%; text-align: right">
+<p><img class="fragment" data-fragment-index="3" src="my_figures/spectrogram_cheap.png" width="100%" data-audio-src="./audio/cheap_clean.wav" data-audio-advance=-1></p>
+</div>
+</section><section id="harmonicity" class="slide level2">
+<h2>Harmonicity</h2>
+<center>
+<img class="fragment" data-fragment-index="4" src="my_figures/spectrogram_arctic_a0002.png" width="80%" data-audio-src="./audio/sentences/arctic_a0002.wav" data-audio-advance=-1>
+</center>
 </section></section>
 <section><section id="encoding-of-sounds" class="title-slide slide level1"><h1>Encoding of sounds</h1></section><section id="monaural-pathway" class="slide level2">
 <h2>Monaural Pathway</h2>
 <center>
-<img class="fragment" data-fragment-index="0" src="my_figures/Anatomy_of_the_Human_Ear.svg" width="80%">
+<img data-src="my_figures/Anatomy_of_the_Human_Ear.svg" style="width:50.0%" />
 </center>
-</section><section id="section" class="slide level2">
-<h2></h2>
+</section><section id="transduction" class="slide level2">
+<h2>Transduction</h2>
 <center>
-<img class="fragment" data-fragment-index="1" src="my_figures/Uncoiled_cochlea_with_basilar_membrane_color.png" width="45%"> <img class="fragment" data-fragment-index="2" src="my_figures/Cochlea-crosssection.png" width="25%"> <br> <img class="fragment" data-fragment-index="3" src="my_figures/auditory_nerve.png" width="25%">
+<img class="fragment" data-fragment-index="0" src="my_figures/Uncoiled_cochlea_with_basilar_membrane_color.png" width="45%"> <img class="fragment" data-fragment-index="1" src="my_figures/Cochlea-crosssection.png" width="25%"> <br> <img class="fragment" data-fragment-index="2" src="my_figures/auditory_nerve.png" width="25%">
 </center>
 </section><section id="coding-at-moderate-intensity-levels" class="slide level2">
 <h2>Coding at moderate intensity levels</h2>
@@ -536,17 +574,24 @@ Grothe et al. (2010)
 <li>Temporal fine structure (TFS)</li>
 <li>Envelope information (ENV)</li>
 </ul>
-<li class="fragment" data-fragment-index="0" data-audio-src="./audio/speech-davidvocoder.wav" data-audio-advance="-1">
-Play 6 Channel vocoder
+<li class="fragment" data-fragment-index="0" data-audio-src="./audio/vocoder_ch_6_arctic_a0008.wav" data-audio-advance="-1">
+Example 1, 6 Channel vocoder
 </li>
-<li class="fragment" data-fragment-index="1" data-audio-src="./audio/david.wav" data-audio-advance="-1">
-Play Original
+<li class="fragment" data-fragment-index="1" data-audio-src="./audio/original_arctic_a0008.wav" data-audio-advance="-1">
+Example 1, Original
+</li>
+<li class="fragment" data-fragment-index="2" data-audio-src="./audio/vocoder_ch_6_david.wav" data-audio-advance="-1">
+Example 2, 6 Channel vocoder
+</li>
+<li class="fragment" data-fragment-index="3" data-audio-src="./audio/original_david.wav" data-audio-advance="-1">
+Example 2, Original
 </li>
 <center>
 <img data-src="my_figures/temporal-example.png" style="width:60.0%" />
 </center>
-</section><section id="binaural-cues" class="slide level2">
-<h2>Binaural cues</h2>
+</section></section>
+<section><section id="binaural-cues" class="title-slide slide level1"><h1>Binaural cues</h1></section><section id="sound-localization" class="slide level2">
+<h2>Sound localization</h2>
 <p>When listening to sounds, we rely on three mechanisms for both sound localization and auditory scene analysis</p>
 <li class="fragment" data-fragment-index="0">
 Interaural level differences (ILDs)
@@ -614,6 +659,30 @@ Modulated 500 Hz tone <br> with envelope itd (ipd) left-to-right
 Modulated 4000 Hz tone <br> with envelope itd left-to-rigth
 </p>
 </div>
+</section><section id="localization-using-itds-1" class="slide level2">
+<h2>Localization using ITDs</h2>
+<p><img src="my_figures/wave_length.png" width="40%"></p>
+<li class="fragment" data-fragment-index="1">
+ITDs are ambiguous for frequencies which half-wavelengths are smaller than the head ‘diameter’.
+</li>
+</section><section id="localization-on-the-vertical-plane" class="slide level2">
+<h2>Localization on the vertical plane</h2>
+<p><img class="fragment" data-fragment-index="0" src="my_figures/zenith.png" width="40%"> <img class="fragment" data-fragment-index="1" src="my_figures/zenith_ir.png" width="50%"></p>
+<li class="fragment" data-fragment-index="2">
+The main cues are provided by diffraction patterns by the head and pinna, which result in characteristic spectral dips
+</li>
+<li class="fragment" data-fragment-index="3">
+Hearing-impaired subjects have wider cochlear filters (increasing spectral smearing), preventing them to localize a source in the vertical plane.
+</li>
+</section><section id="the-precedence-effect" class="slide level2">
+<h2>The precedence effect</h2>
+<p><img src="my_figures/precedence_effect_cartoon.png" width="80%"> <br> (Dietz et al. 2013)</p>
+<li class="fragment" data-fragment-index="0">
+A single auditory event is perceived at the direction of the first direct wave front (2 and 50 ms later, even when reflections are 10 dB louder)
+</li>
+<li class="fragment" data-fragment-index="1">
+Asymmetric hearing loss, hearing impairment and ageing negatively affect the precedence effect (Akeroyd and Guy, 2011). This can only partially restored by hearing aids.
+</li>
 </section></section>
 <section><section id="binaural-processing-and-speech-understanding" class="title-slide slide level1"><h1>Binaural processing and speech understanding</h1></section><section id="binaural-redundancy-aka-binarural-summation" class="slide level2">
 <h2>Binaural Redundancy (aka Binarural summation)</h2>
@@ -660,13 +729,13 @@ ITD is a critical spatial cue for sound localization and speech perception in no
 <li class="fragment">Hearing impaired listeners with symmetric binaural hearing often demonstrate reduced SRM primarily due to increased thresholds in spatially separated conditions (Arbogast et al., 2005; Marrone et al., 2008b; Best et al., 2012)</li>
 </ul>
 </section></section>
-<section><section id="auditory-pathway" class="title-slide slide level1"><h1>Auditory Pathway</h1></section><section id="section-1" class="slide level2">
-<h2></h2>
+<section><section id="auditory-pathway" class="title-slide slide level1"><h1>Auditory Pathway</h1></section><section id="from-sound-to-neural-spikes" class="slide level2">
+<h2>From sound to neural spikes</h2>
 <center>
 Input to one ear <br> <img data-src="my_figures/spectrogram_cheap.png" style="width:40.0%" /> <br> Output at the auditory nerve level <br> <img data-src="my_figures/rater.png" style="width:40.0%" />
 </center>
-</section><section id="section-2" class="slide level2">
-<h2></h2>
+</section><section id="from-the-ear-to-the-brain" class="slide level2">
+<h2>From the ear to the brain</h2>
 <center>
 <img data-src="my_figures/auitorypath.png" style="width:40.0%" />
 </center>
@@ -789,8 +858,8 @@ MSO are innervated by direct excitatory ipsi- anc contra-lateral inputs from sph
 <center>
 (Undurraga et al. 2016)
 </center>
-</section><section id="section-3" class="slide level2">
-<h2></h2>
+</section><section id="examples" class="slide level2">
+<h2>Examples</h2>
 <ul>
 <li>The size of the interaural phase difference (relative ITD with respect to the frequency of the sound) will determine the lateralization of the sound.</li>
 </ul>
@@ -917,8 +986,8 @@ Vercammen et al. (2018)
 <img data-src="my_figures/behavioural.png" style="width:60.0%" /> <br> <img data-src="my_figures/noise.png" style="width:30.0%" />
 </center></li>
 </ul>
-</section><section id="section-4" class="slide level2">
-<h2></h2>
+</section><section id="behavioural-methods" class="slide level2">
+<h2>Behavioural methods</h2>
 <ul>
 <li><p>Initial step size: 6 dB first two reversals; 3 dB next two reversals, and 2 dB last six reversals.</p></li>
 <li><p>Noise was presented diotically (i.e. identical signal in both ears) at 65 dB SPL.</p></li>
@@ -1041,6 +1110,12 @@ Vercammen et al. (2018)
         // Transition style for full page slide backgrounds
         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
 
+        menu: {
+          custom: false,
+          themes: false,
+          transitions: false
+        },
+
 
 
         chalkboard: {
@@ -1060,6 +1135,7 @@ Vercammen et al. (2018)
           { src: 'presentation_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
           { src: 'presentation_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
           { src: 'presentation_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+          { src: 'presentation_files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
         ]
       });
     </script>
